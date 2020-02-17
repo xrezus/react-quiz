@@ -7,11 +7,13 @@ const ActiveQuiz = props => (
         <p className={'question'}>
         <span>
             <strong>2.</strong>&nbsp;
-            Первый вопрос
+            {props.question}
         </span>
             <small>4 из 12</small>
         </p>
-        <AnswerList answers={props.answers}/>
+        <AnswerList
+            onAnswerClick={props.onAnswerClick}
+            answers={props.answers}/>
     </div>
 );
 
